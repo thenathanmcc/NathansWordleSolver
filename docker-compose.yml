@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  dictionary-db:
+    build: ./dictionary-db
+    container_name: dictionary-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=dictionary_db

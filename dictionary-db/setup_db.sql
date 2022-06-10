@@ -1,0 +1,10 @@
+DROP TABLE words
+
+CREATE TABLE words (
+	word_id SERIAL PRIMARY KEY,
+	word VARCHAR(10)
+);
+
+CREATE ROLE test WITH PASSWORD 'test_password' LOGIN;
+GRANT SELECT, INSERT ON ALL TABLES IN SCHEMA public TO test;
+GRANT CONNECT ON DATABASE dictionary_db TO test;
