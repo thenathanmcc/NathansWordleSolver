@@ -1,4 +1,4 @@
-DROP TABLE words
+DROP TABLE words;
 
 CREATE TABLE words (
 	word_id SERIAL PRIMARY KEY,
