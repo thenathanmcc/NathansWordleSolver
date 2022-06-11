@@ -7,4 +7,5 @@ CREATE TABLE words (
 
 CREATE ROLE test WITH PASSWORD 'test_password' LOGIN;
 GRANT SELECT, INSERT ON ALL TABLES IN SCHEMA public TO test;
+GRANT USAGE, SELECT ON SEQUENCE words_word_id_seq TO test;
 GRANT CONNECT ON DATABASE dictionary_db TO test;
